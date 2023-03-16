@@ -41,4 +41,9 @@
     <string name="no_habits_yet_text">У вас ещё нет привычек</string>
     <string name="add_habit_button_text">Добавить привычку</string>
     <string name="add_habits_name_text">Добавить название привычки</string>
+    <string name="selected_color">Выбранный цвет</string>
+    <string name="rgb_text">RGB</string>
+    <string name="hsv_text">HSV</string>
+    <string name="hex_text">HEX</string>
+    <string name="reset_color_text">Сбросить цвет</string>
 </resources>
