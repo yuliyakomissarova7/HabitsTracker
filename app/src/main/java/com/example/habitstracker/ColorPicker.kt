@@ -14,6 +14,9 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.view.setMargins
 import com.google.android.material.button.MaterialButton
+import com.example.habitstracker.extensions.toHex
+import com.example.habitstracker.extensions.toRgb
+import com.example.habitstracker.extensions.toHsv
 
 class ColorPicker(private val context: Context, private val defaultColorId: Int)
     : Dialog(context) {

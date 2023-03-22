@@ -1,4 +1,4 @@
-package com.example.habitstracker
+package com.example.habitstracker.extensions
 
 import android.graphics.Color
 import kotlin.math.roundToInt

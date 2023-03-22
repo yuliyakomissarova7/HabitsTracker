@@ -7,11 +7,14 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.habitstracker.databinding.ActivityMainBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity(), HabitAdapter.OnHabitCardListener {
 
     private var noHabitsMessage: TextView? = null
+
+    private lateinit var binding: ActivityMainBinding
 
     companion object {
         var habits: MutableList<Habit> = mutableListOf()
@@ -19,15 +22,16 @@ class MainActivity : AppCompatActivity(), HabitAdapter.OnHabitCardListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        noHabitsMessage = findViewById(R.id.no_habits_message)
+        noHabitsMessage = binding.noHabitsMessage
 
         setListenerOnAddHabitButton()
     }
 
     private fun setListenerOnAddHabitButton() {
-        val addHabitButton: FloatingActionButton = findViewById(R.id.add_habit_button)
+        val addHabitButton: FloatingActionButton = binding.addHabitButton
         addHabitButton.setOnClickListener {
             val intent = Intent(this, HabitEditingActivity::class.java)
             startActivity(intent)
@@ -43,7 +47,7 @@ class MainActivity : AppCompatActivity(), HabitAdapter.OnHabitCardListener {
     }
 
     private fun setupRecyclerView() {
-        val recyclerView: RecyclerView = findViewById(R.id.habits_list)
+        val recyclerView: RecyclerView = binding.habitsList
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = HabitAdapter(habits, applicationContext, this)
     }
@@ -51,8 +55,8 @@ class MainActivity : AppCompatActivity(), HabitAdapter.OnHabitCardListener {
     override fun onHabitCardClick(position: Int) {
         val intent = Intent(this, HabitEditingActivity::class.java)
             .apply {
-                putExtra(getString(R.string.intent_extra_habit_position), position)
-                putExtra(getString(R.string.intent_extra_habit), habits[position]) }
+                putExtra("position", position)
+                putExtra("habit", habits[position]) }
         startActivity(intent)
     }
 }

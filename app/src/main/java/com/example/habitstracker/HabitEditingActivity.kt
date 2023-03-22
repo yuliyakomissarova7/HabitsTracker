@@ -9,8 +9,13 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.core.widget.doOnTextChanged
+import com.example.habitstracker.databinding.ActivityHabitEditingBinding
+import com.example.habitstracker.extensions.getSerializable
+import com.example.habitstracker.extensions.toHex
 
 class HabitEditingActivity : AppCompatActivity(), ColorPicker.OnSaveColorListener {
+
+    private lateinit var binding: ActivityHabitEditingBinding
 
     private var titleEditText: EditText? = null
     private var typeRadioGroup: RadioGroup? = null
@@ -27,7 +32,8 @@ class HabitEditingActivity : AppCompatActivity(), ColorPicker.OnSaveColorListene
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_habit_editing)
+        binding = ActivityHabitEditingBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         findViews()
 
@@ -42,26 +48,26 @@ class HabitEditingActivity : AppCompatActivity(), ColorPicker.OnSaveColorListene
     }
 
     private fun setListenerOnCloseButton() {
-        val closeButton: ImageButton = findViewById(R.id.close_button)
+        val closeButton: ImageButton = binding.closeButton
         closeButton.setOnClickListener { finish() }
     }
 
     private fun findViews() {
-        titleEditText = findViewById(R.id.habits_name)
-        typeRadioGroup = findViewById(R.id.radio_group)
-        prioritySpinner = findViewById(R.id.spinner_priority)
-        repetitionTimesEditText = findViewById(R.id.repetition_times)
-        repetitionPeriodSpinner = findViewById(R.id.repetition_period)
-        colorValueTextView = findViewById(R.id.color_value)
-        descriptionEditText = findViewById(R.id.description)
-        titleIsRequiredMessage = findViewById(R.id.title_is_required_message)
+        titleEditText = binding.habitsName
+        typeRadioGroup = binding.radioGroup
+        prioritySpinner = binding.spinnerPriority
+        repetitionTimesEditText = binding.repetitionTimes
+        repetitionPeriodSpinner = binding.repetitionPeriod
+        colorValueTextView = binding.colorValue
+        descriptionEditText = binding.description
+        titleIsRequiredMessage = binding.titleIsRequiredMessage
     }
 
     override fun onStart() {
         super.onStart()
 
-        val habit: Habit? = intent.getSerializable(getString(R.string.intent_extra_habit), Habit::class.java)
-        val habitPosition: Int = intent.getIntExtra(getString(R.string.intent_extra_habit_position), -1)
+        val habit: Habit? = intent.getSerializable("habit", Habit::class.java)
+        val habitPosition: Int = intent.getIntExtra("position", -1)
         if (habit != null && habitPosition >= 0) {
             titleEditText?.setText(habit.title)
             typeRadioGroup?.check(habit.type.radioButtonId)
@@ -90,7 +96,7 @@ class HabitEditingActivity : AppCompatActivity(), ColorPicker.OnSaveColorListene
     }
 
     private fun setListenerOnRepetitionTimesEditText() {
-        val repeatTimes: TextView = findViewById(R.id.repeat_times)
+        val repeatTimes: TextView = binding.repeatTimes
 
         repetitionTimesEditText?.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus && repetitionTimesEditText?.text.toString().isEmpty()) {
@@ -132,7 +138,7 @@ class HabitEditingActivity : AppCompatActivity(), ColorPicker.OnSaveColorListene
     }
 
     private fun setListenerOnSaveButton() {
-        val saveButton: Button = findViewById(R.id.save_button)
+        val saveButton: Button = binding.saveButton
 
         saveButton.setOnClickListener {
             val title = titleEditText?.text.toString()
