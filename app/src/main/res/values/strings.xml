@@ -1,12 +1,49 @@
 <resources>
     <string name="app_name">HabitsTracker</string>
-    <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="edit_habit_name">Название привычки</string>
+    <string name="close_editing_habit">Закрыть</string>
+    <string name="good_habit">Полезная</string>
+    <string name="bad_habit">Вредная</string>
+
+    <string name="high_priority">Очень важно</string>
+    <string name="medium_priority">Важно</string>
+    <string name="low_priority">Не очень важно</string>
+
+    <string name="day">день</string>
+    <string name="week">неделю</string>
+    <string name="month">месяц</string>
+    <string name="year">год</string>
+    <string name="never">Никогда</string>
+    <string name="every_day">Ежедневно</string>
+
+    <plurals name="times">
+        <item quantity="zero">раз в</item>
+        <item quantity="one">раз в</item>
+        <item quantity="many">раз в</item>
+        <item quantity="few">раза в</item>
+    </plurals>
+
+    <string name="intent_extra_habit">habit</string>
+    <string name="intent_extra_habit_position">position</string>
+    <string name="obligatory_field_text">Обязательное поле</string>
+    <string name="color_line_text">Цвет</string>
+    <string name="default_color_text">Цвет по умолчанию</string>
+    <string name="type_line_text">Тип</string>
+    <string name="priority_line_text">Приоритет</string>
+    <string name="repetition_line_text">Периодичность</string>
+    <string name="one">1</string>
+    <string name="times_in">раз в</string>
+    <string name="description">Описание</string>
+    <string name="add_description_text">Добавьте описание</string>
+    <string name="save_button_text">Сохранить</string>
+    <string name="no_habits_yet_text">У вас ещё нет привычек</string>
+    <string name="add_habit_button_text">Добавить привычку</string>
+    <string name="add_habits_name_text">Добавить название привычки</string>
+    <string name="selected_color">Выбранный цвет</string>
+    <string name="rgb_text">RGB</string>
+    <string name="hsv_text">HSV</string>
+    <string name="hex_text">HEX</string>
+    <string name="reset_color_text">Сбросить цвет</string>
 </resources>
