@@ -5,4 +5,22 @@
         <item name="strokeColor">@color/white</item>
         <item name="strokeWidth">1dp</item>
     </style>
+
+    <style name="FragmentLabelText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppName">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <style name="Text.MainText">
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>

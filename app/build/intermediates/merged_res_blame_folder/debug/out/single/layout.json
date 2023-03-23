@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.example.habitstracker.app-mergeDebugResources-44:/layout/fragment_color_picker.xml",
+        "source": "com.example.habitstracker.app-main-47:/layout/fragment_color_picker.xml"
+    },
+    {
+        "merged": "com.example.habitstracker.app-mergeDebugResources-44:/layout/fragment_habits_list.xml",
+        "source": "com.example.habitstracker.app-main-47:/layout/fragment_habits_list.xml"
+    },
+    {
+        "merged": "com.example.habitstracker.app-mergeDebugResources-44:/layout/fragment_about_app.xml",
+        "source": "com.example.habitstracker.app-main-47:/layout/fragment_about_app.xml"
+    },
+    {
+        "merged": "com.example.habitstracker.app-mergeDebugResources-44:/layout/fragment_main.xml",
+        "source": "com.example.habitstracker.app-main-47:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "com.example.habitstracker.app-mergeDebugResources-44:/layout/toolbar.xml",
+        "source": "com.example.habitstracker.app-main-47:/layout/toolbar.xml"
+    },
+    {
+        "merged": "com.example.habitstracker.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "com.example.habitstracker.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.habitstracker.app-mergeDebugResources-44:/layout/nav_drawer_header.xml",
+        "source": "com.example.habitstracker.app-main-47:/layout/nav_drawer_header.xml"
+    },
+    {
+        "merged": "com.example.habitstracker.app-mergeDebugResources-44:/layout/fragment_habit_editing.xml",
+        "source": "com.example.habitstracker.app-main-47:/layout/fragment_habit_editing.xml"
+    },
+    {
+        "merged": "com.example.habitstracker.app-mergeDebugResources-44:/layout/habit_card.xml",
+        "source": "com.example.habitstracker.app-main-47:/layout/habit_card.xml"
+    }
+]
