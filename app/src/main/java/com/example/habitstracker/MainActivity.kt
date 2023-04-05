@@ -1,9 +1,6 @@
 package com.example.habitstracker
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
@@ -13,11 +10,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.habitstracker.databinding.ActivityMainBinding
-import com.example.habitstracker.fragments.HabitEditingFragment
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.example.habitstracker.entities.*
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(){

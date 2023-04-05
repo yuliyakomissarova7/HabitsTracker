@@ -1,126 +1,130 @@
 [
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/color_menu_item.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/color/menu_item.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/layout_fragment_about_app.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/layout/fragment_about_app.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/layout_toolbar.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/layout/toolbar.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/drawable_round_corners_white.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/drawable/round_corners_white.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/layout_fragment_main.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/fragment_main.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/navigation_nav_graph.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/navigation/nav_graph.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/navigation_nav_graph.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/navigation/nav_graph.xml"
     },
     {
         "merged": "com.example.habitstracker.app-merged_res-45:/layout_fragment_main.xml.flat",
         "source": "com.example.habitstracker.app-main-47:/layout/fragment_main.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/drawable_round_corners.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/drawable/round_corners.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/layout_activity_main.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/layout_nav_drawer_header.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/layout/nav_drawer_header.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-anydpi-v33/ic_launcher.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/menu_menu.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/menu/menu.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/xml_backup_rules.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/xml/backup_rules.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/color_menu_item.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/color/menu_item.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/layout_fragment_color_picker.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/layout/fragment_color_picker.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/layout_toolbar.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/toolbar.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/layout_fragment_habit_editing.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/layout/fragment_habit_editing.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/layout_nav_drawer_header.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/nav_drawer_header.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/menu_menu.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/menu/menu.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/drawable/ic_launcher_background.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/layout_fragment_habit_editing.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/fragment_habit_editing.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/xml_data_extraction_rules.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/layout_habit_card.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/layout/habit_card.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/layout_fragment_habits_list.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/fragment_habits_list.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-anydpi-v33_ic_launcher.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-anydpi-v33/ic_launcher.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/layout_habit_card.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/habit_card.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/drawable_round_corners_white.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/drawable/round_corners_white.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/xml_backup_rules.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/xml/data_extraction_rules.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/drawable_round_corners.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/drawable/round_corners.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/layout_fragment_habits_list.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/layout/fragment_habits_list.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/layout_activity_main.xml.flat",
-        "source": "com.example.habitstracker.app-main-47:/layout/activity_main.xml"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.habitstracker.app-merged_res-45:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.habitstracker.app-main-47:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/layout_fragment_color_picker.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/fragment_color_picker.xml"
+    },
+    {
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-merged_res-45:/layout_fragment_about_app.xml.flat",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/fragment_about_app.xml"
     }
 ]

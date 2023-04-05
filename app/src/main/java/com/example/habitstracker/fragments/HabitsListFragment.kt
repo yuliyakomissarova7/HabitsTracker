@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.habitstracker.*
+import com.example.habitstracker.entities.*
 import com.example.habitstracker.extensions.customGetSerializable
 import com.example.habitstracker.habitAdapter.HabitAdapter
 

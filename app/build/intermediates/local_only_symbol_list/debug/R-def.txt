@@ -114,7 +114,6 @@ string good_habit
 string good_habits_title
 string habits_list_no_bad_habits
 string habits_list_no_good_habits
-string hello_blank_fragment
 string hex_text
 string high_priority
 string hsv_text

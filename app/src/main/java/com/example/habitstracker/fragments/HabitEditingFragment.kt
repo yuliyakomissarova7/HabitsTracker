@@ -11,6 +11,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.habitstracker.*
+import com.example.habitstracker.entities.*
 import com.example.habitstracker.extensions.customGetSerializable
 import com.example.habitstracker.extensions.toHex
 
@@ -56,7 +57,7 @@ class HabitEditingFragment : Fragment(R.layout.fragment_habit_editing) {
             getParams(habit!!)
         }
 
-        OnTitleEditText()
+        onTitleEditText()
         onPrioritySpinner()
         onRepetitionTimesEditText(view)
         onRepetitionPeriodSpinner()
@@ -73,7 +74,7 @@ class HabitEditingFragment : Fragment(R.layout.fragment_habit_editing) {
             HabitType.GOOD -> R.id.good_habit_button
             HabitType.BAD -> R.id.bad_habit_button
         })
-        priority?.setSelection(HabitPriority.values().indexOf(habit.priority))
+        priority?.setSelection(Priority.values().indexOf(habit.priority))
         repetitionTimes?.setText(habit.repetitionTimes.toString())
         repetitionPeriod?.setSelection(Period.values().indexOf(habit.repetitionPeriod))
         setSelectedColor(habit.colorId)
@@ -97,7 +98,7 @@ class HabitEditingFragment : Fragment(R.layout.fragment_habit_editing) {
         description = view.findViewById(R.id.description)
     }
 
-    private fun OnTitleEditText() {
+    private fun onTitleEditText() {
         title?.doOnTextChanged { _, _, _, _ ->
             titleIsRequiredMessage?.visibility = View.GONE}
     }
@@ -107,7 +108,7 @@ class HabitEditingFragment : Fragment(R.layout.fragment_habit_editing) {
         priority?.adapter = ArrayAdapter(
             activityContext,
             android.R.layout.simple_spinner_item,
-            HabitPriority.values().map { getString(it.textId) }
+            Priority.values().map { getString(it.textId) }
         )
     }
 
@@ -178,7 +179,7 @@ class HabitEditingFragment : Fragment(R.layout.fragment_habit_editing) {
                     R.id.bad_habit_button -> HabitType.BAD
                     else -> HabitType.GOOD
                 }
-                val priority: HabitPriority = HabitPriority.values()[priority?.selectedItemPosition ?: 0]
+                val priority: Priority = Priority.values()[priority?.selectedItemPosition ?: 0]
                 val repetitionTimes: Int = repetitionTimes?.text.toString().toInt()
                 val repetitionPeriod: Period = Period.values()[repetitionPeriod?.selectedItemPosition ?: 0]
                 val description: String = description?.text.toString()

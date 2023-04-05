@@ -1,6 +1,5 @@
 package com.example.habitstracker.fragments
 
-import android.app.Dialog
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -17,7 +16,6 @@ import androidx.core.os.bundleOf
 import androidx.core.view.setMargins
 import androidx.fragment.app.DialogFragment
 import com.example.habitstracker.R
-import com.example.habitstracker.databinding.ActivityMainBinding
 import com.example.habitstracker.databinding.FragmentColorPickerBinding
 import com.google.android.material.button.MaterialButton
 import com.example.habitstracker.extensions.toHex

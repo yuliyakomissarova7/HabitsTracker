@@ -2,15 +2,11 @@ package com.example.habitstracker.habitAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
 import com.example.habitstracker.*
+import com.example.habitstracker.entities.*
 
 class HabitAdapter(private val habits: List<Habit>,
                    private val type: HabitType,

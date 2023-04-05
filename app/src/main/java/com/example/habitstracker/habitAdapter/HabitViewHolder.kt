@@ -4,12 +4,10 @@ import android.content.Context
 import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.habitstracker.*
-import com.example.habitstracker.fragments.ARG_HABIT
-import com.example.habitstracker.fragments.ARG_HABIT_POSITION
+import com.example.habitstracker.entities.*
 import com.example.habitstracker.fragments.MainFragmentDirections
 
 class HabitViewHolder(itemView: View, private val context: Context,
