@@ -1,23 +1,30 @@
 package com.example.habitstracker
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.habitstracker.databinding.ActivityMainBinding
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.example.habitstracker.entities.*
+import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity(), HabitAdapter.OnHabitCardListener {
+class MainActivity : AppCompatActivity(){
 
-    private var noHabitsMessage: TextView? = null
+    private lateinit var navHostFragment: NavHostFragment
+    private lateinit var navController: NavController
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     private lateinit var binding: ActivityMainBinding
 
     companion object {
-        var habits: MutableList<Habit> = mutableListOf()
+        var habits: MutableMap<HabitType, MutableList<Habit>> =
+            mutableMapOf(HabitType.GOOD to mutableListOf(), HabitType.BAD to mutableListOf())
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,38 +32,29 @@ class MainActivity : AppCompatActivity(), HabitAdapter.OnHabitCardListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        noHabitsMessage = binding.noHabitsMessage
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
-        setListenerOnAddHabitButton()
-    }
+        navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.my_nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
 
-    private fun setListenerOnAddHabitButton() {
-        val addHabitButton: FloatingActionButton = binding.addHabitButton
-        addHabitButton.setOnClickListener {
-            val intent = Intent(this, HabitEditingActivity::class.java)
-            startActivity(intent)
+        val navigationView: NavigationView = binding.navView
+        navigationView.setupWithNavController(navController)
+
+        val drawerLayout: DrawerLayout = binding.drawerLayout
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.mainFragment, R.id.aboutAppFragment), drawerLayout)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.editHabitFragment) {
+                supportActionBar?.hide()
+            } else {
+                supportActionBar?.show()
+            }
         }
     }
 
-    override fun onStart() {
-        super.onStart()
+    override fun onSupportNavigateUp() = navController.navigateUp(appBarConfiguration)
 
-        noHabitsMessage?.visibility = if (habits.size == 0) View.VISIBLE else View.GONE
-
-        setupRecyclerView()
-    }
-
-    private fun setupRecyclerView() {
-        val recyclerView: RecyclerView = binding.habitsList
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = HabitAdapter(habits, applicationContext, this)
-    }
-
-    override fun onHabitCardClick(position: Int) {
-        val intent = Intent(this, HabitEditingActivity::class.java)
-            .apply {
-                putExtra("position", position)
-                putExtra("habit", habits[position]) }
-        startActivity(intent)
-    }
 }

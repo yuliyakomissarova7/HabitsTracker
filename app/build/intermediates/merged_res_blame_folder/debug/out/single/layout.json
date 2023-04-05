@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-mergeDebugResources-44:/layout/fragment_habits_list.xml",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/fragment_habits_list.xml"
+    },
+    {
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-mergeDebugResources-44:/layout/fragment_main.xml",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-mergeDebugResources-44:/layout/habit_card.xml",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/habit_card.xml"
+    },
+    {
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-mergeDebugResources-44:/layout/fragment_color_picker.xml",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/fragment_color_picker.xml"
+    },
+    {
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-mergeDebugResources-44:/layout/fragment_about_app.xml",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/fragment_about_app.xml"
+    },
+    {
+        "merged": "com.example.habitstracker.app-mergeDebugResources-44:/layout/fragment_main.xml",
+        "source": "com.example.habitstracker.app-main-47:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-mergeDebugResources-44:/layout/fragment_habit_editing.xml",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/fragment_habit_editing.xml"
+    },
+    {
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-mergeDebugResources-44:/layout/toolbar.xml",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/toolbar.xml"
+    },
+    {
+        "merged": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-mergeDebugResources-44:/layout/nav_drawer_header.xml",
+        "source": "/home/yulya/.gradle/daemon/7.5/com.example.habitstracker.app-main-47:/layout/nav_drawer_header.xml"
+    }
+]

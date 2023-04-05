@@ -46,4 +46,9 @@
     <string name="hsv_text">HSV</string>
     <string name="hex_text">HEX</string>
     <string name="reset_color_text">Сбросить цвет</string>
+    <string name="habits_list_no_good_habits">У вас ещё нет полезных привычек</string>
+    <string name="habits_list_no_bad_habits">У вас ещё нет вредных привычек</string>
+    <string name="good_habits_title">Полезные</string>
+    <string name="bad_habits_title">Вредные</string>
+    <string name="about_app_title">О приложении</string>
 </resources>

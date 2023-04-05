@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="almost_black">#1C1B1F</color>
+    <color name="black">#FF000000</color>
+    <color name="dark_blue">#2963A9</color>
+    <color name="dark_grey">#27262C</color>
+    <color name="default_color">#2963A8</color>
+    <color name="gradient_color1">#2963A8</color>
+    <color name="gradient_color10">#BEBB73</color>
+    <color name="gradient_color11">#E1C26C</color>
+    <color name="gradient_color12">#E2B162</color>
+    <color name="gradient_color13">#DA9A58</color>
+    <color name="gradient_color14">#D2844E</color>
+    <color name="gradient_color15">#CA6D43</color>
+    <color name="gradient_color16">#C05438</color>
+    <color name="gradient_color2">#2973A0</color>
+    <color name="gradient_color3">#297E9E</color>
+    <color name="gradient_color4">#2A8999</color>
+    <color name="gradient_color5">#2A9494</color>
+    <color name="gradient_color6">#2F9E8E</color>
+    <color name="gradient_color7">#52A588</color>
+    <color name="gradient_color8">#76AC81</color>
+    <color name="gradient_color9">#9BB480</color>
+    <color name="green">#2A9D8F</color>
+    <color name="light_blue">#3A7DCF</color>
+    <color name="light_grey">#EDEDED</color>
+    <color name="medium_grey">#454447</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="red">#BB4430</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#E9C46A</color>
+    <dimen name="color_picker_button_margin">10dp</dimen>
+    <dimen name="color_picker_button_size">70dp</dimen>
+    <dimen name="corner_radius">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <plurals name="times">
+        <item quantity="zero">раз в</item>
+        <item quantity="one">раз в</item>
+        <item quantity="many">раз в</item>
+        <item quantity="few">раза в</item>
+    </plurals>
+    <string name="about_app_title">О приложении</string>
+    <string name="add_description_text">Добавьте описание</string>
+    <string name="add_habit_button_text">Добавить привычку</string>
+    <string name="add_habits_name_text">Добавить название привычки</string>
+    <string name="app_name">HabitsTracker</string>
+    <string name="bad_habit">Вредная</string>
+    <string name="bad_habits_title">Вредные</string>
+    <string name="close_editing_habit">Закрыть</string>
+    <string name="color_line_text">Цвет</string>
+    <string name="day">день</string>
+    <string name="default_color_text">Цвет по умолчанию</string>
+    <string name="description">Описание</string>
+    <string name="edit_habit_name">Название привычки</string>
+    <string name="every_day">Ежедневно</string>
+    <string name="good_habit">Полезная</string>
+    <string name="good_habits_title">Полезные</string>
+    <string name="habits_list_no_bad_habits">У вас ещё нет вредных привычек</string>
+    <string name="habits_list_no_good_habits">У вас ещё нет полезных привычек</string>
+    <string name="hex_text">HEX</string>
+    <string name="high_priority">Очень важно</string>
+    <string name="hsv_text">HSV</string>
+    <string name="intent_extra_habit">habit</string>
+    <string name="intent_extra_habit_position">position</string>
+    <string name="low_priority">Не очень важно</string>
+    <string name="medium_priority">Важно</string>
+    <string name="month">месяц</string>
+    <string name="never">Никогда</string>
+    <string name="no_habits_yet_text">У вас ещё нет привычек</string>
+    <string name="obligatory_field_text">Обязательное поле</string>
+    <string name="one">1</string>
+    <string name="priority_line_text">Приоритет</string>
+    <string name="repetition_line_text">Периодичность</string>
+    <string name="reset_color_text">Сбросить цвет</string>
+    <string name="rgb_text">RGB</string>
+    <string name="save_button_text">Сохранить</string>
+    <string name="selected_color">Выбранный цвет</string>
+    <string name="times_in">раз в</string>
+    <string name="type_line_text">Тип</string>
+    <string name="week">неделю</string>
+    <string name="year">год</string>
+    <style name="AppName">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="ColorPickerButton">
+        <item name="cornerRadius">10dp</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+    <style name="FragmentLabelText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Text">
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+    <style name="Text.MainText">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="Theme.HabitsTracker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryVariant">@color/light_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/light_grey</item>
+        <item name="colorSecondaryVariant">@color/light_grey</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        
+    </style>
+    <style name="Theme.HabitsTracker.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.HabitsTracker.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.HabitsTracker.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/mainFragment"
+        android:icon="?attr/actionModePasteDrawable"
+        android:title="Привычки" />
+
+    <item
+        android:id="@id/aboutAppFragment"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="О приложении" />
+</menu>
