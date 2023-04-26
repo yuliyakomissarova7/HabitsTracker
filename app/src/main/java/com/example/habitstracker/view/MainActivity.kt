@@ -1,4 +1,4 @@
-package com.example.habitstracker
+package com.example.habitstracker.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,8 +10,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.habitstracker.R
 import com.example.habitstracker.databinding.ActivityMainBinding
-import com.example.habitstracker.entities.*
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(){
@@ -19,13 +19,7 @@ class MainActivity : AppCompatActivity(){
     private lateinit var navHostFragment: NavHostFragment
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
-
     private lateinit var binding: ActivityMainBinding
-
-    companion object {
-        var habits: MutableMap<HabitType, MutableList<Habit>> =
-            mutableMapOf(HabitType.GOOD to mutableListOf(), HabitType.BAD to mutableListOf())
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +37,7 @@ class MainActivity : AppCompatActivity(){
         navigationView.setupWithNavController(navController)
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
-        appBarConfiguration = AppBarConfiguration(setOf(R.id.mainFragment, R.id.aboutAppFragment), drawerLayout)
+        appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->

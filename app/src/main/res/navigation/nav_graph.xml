@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.habitstracker.fragments.MainFragment"
+        android:name="com.example.habitstracker.view.MainFragment"
         android:label="Мои привычки"
         tools:layout="@layout/fragment_main">
         <action
@@ -21,21 +21,16 @@
     </fragment>
     <fragment
         android:id="@+id/editHabitFragment"
-        android:name="com.example.habitstracker.fragments.HabitEditingFragment"
+        android:name="com.example.habitstracker.view.HabitEditingFragment"
         android:label="fragment_edit_habit">
         <argument
-            android:name="habitPosition"
-            app:argType="integer"
-            android:defaultValue="-1" />
-        <argument
-            android:name="habit"
-            app:argType="com.example.habitstracker.Habit"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            android:name="habitId"
+            app:argType="long"
+            android:defaultValue="-1L" />
     </fragment>
     <fragment
         android:id="@+id/aboutAppFragment"
-        android:name="com.example.habitstracker.fragments.AboutAppFragment"
+        android:name="com.example.habitstracker.view.AboutAppFragment"
         android:label="О приложении"
         tools:layout="@layout/fragment_about_app" />
 </navigation>

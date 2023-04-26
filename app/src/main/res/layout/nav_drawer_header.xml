@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="104dp"
         android:background="@color/default_color"
-        android:text="Трекер \nпривычек"
+        android:text="@string/appTitle"
         android:gravity="center_vertical"
         android:paddingHorizontal="20dp"
         android:textAppearance="@style/AppName"/>

@@ -1,4 +1,4 @@
-package com.example.habitstracker.fragments
+package com.example.habitstracker.view
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -8,70 +8,41 @@ import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.*
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.setMargins
 import androidx.fragment.app.DialogFragment
 import com.example.habitstracker.R
 import com.example.habitstracker.databinding.FragmentColorPickerBinding
+import com.example.habitstracker.entities.HabitColor
+import com.example.habitstracker.extensions.customGetSerializable
 import com.google.android.material.button.MaterialButton
 import com.example.habitstracker.extensions.toHex
 import com.example.habitstracker.extensions.toRgb
 import com.example.habitstracker.extensions.toHsv
 
-private const val ARG_DEFAULT_COLOR_ID = "default_color_id"
+private const val ARG_DEFAULT_COLOR = "default_color"
 
 class ColorPickerFragment : DialogFragment() {
-
-    private val gradientColorsIds: IntArray = intArrayOf(
-        R.color.gradient_color1,
-        R.color.gradient_color2,
-        R.color.gradient_color3,
-        R.color.gradient_color4,
-        R.color.gradient_color5,
-        R.color.gradient_color6,
-        R.color.gradient_color7,
-        R.color.gradient_color8,
-        R.color.gradient_color9,
-        R.color.gradient_color10,
-        R.color.gradient_color11,
-        R.color.gradient_color12,
-        R.color.gradient_color13,
-        R.color.gradient_color14,
-        R.color.gradient_color15,
-        R.color.gradient_color16,
-    )
-
+    private var selectedColor: HabitColor = HabitColor.defaultColor()
+    private lateinit var context: Context
     private lateinit var binding: FragmentColorPickerBinding
 
-    private var colorPalette: LinearLayout? = null
-
-    private var selectedColorImage: ImageView? = null
-    private var rgbValue: TextView? = null
-    private var hsvValue: TextView? = null
-    private var hexValue: TextView? = null
-
-    private var selectedColorId: Int = R.color.default_color
-
-    private lateinit var context: Context
-
     companion object {
-        fun newInstance(defaultColorId: Int) =
+        fun newInstance(defaultColorId: HabitColor) =
             ColorPickerFragment().apply {
                 arguments = Bundle().apply {
-                    putInt(ARG_DEFAULT_COLOR_ID, defaultColorId)
+                    putSerializable(ARG_DEFAULT_COLOR, defaultColorId)
                 }
             }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = FragmentColorPickerBinding.inflate(layoutInflater)
         arguments?.let {
-            selectedColorId = it.getInt(ARG_DEFAULT_COLOR_ID)
+            selectedColor = it.customGetSerializable(ARG_DEFAULT_COLOR, HabitColor::class.java)
+                ?: HabitColor.defaultColor()
         }
     }
 
@@ -81,7 +52,8 @@ class ColorPickerFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View {
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        return inflater.inflate(R.layout.fragment_color_picker, container, false)
+        binding = FragmentColorPickerBinding.inflate(inflater, container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -89,16 +61,9 @@ class ColorPickerFragment : DialogFragment() {
 
         context = activity as Context
 
-        colorPalette = view.findViewById(R.id.color_palette)
-
-        selectedColorImage = view.findViewById(R.id.selected_color)
-        rgbValue = view.findViewById(R.id.rgb_value)
-        hsvValue = view.findViewById(R.id.hsv_value)
-        hexValue = view.findViewById(R.id.hex_value)
-
         setGradientBackground()
         createButtons()
-        setSelectedColorValues(selectedColorId)
+        setSelectedColorValues(selectedColor)
         setListenerOnDefaultColorButton(view)
         setListenerOnSaveButton(view)
     }
@@ -106,20 +71,20 @@ class ColorPickerFragment : DialogFragment() {
     private fun setGradientBackground() {
         val gradientBackground = GradientDrawable(
             GradientDrawable.Orientation.LEFT_RIGHT,
-            gradientColorsIds
-                .map { context.getColor(it) }
+            HabitColor.values()
+                .map { context.getColor(it.colorId) }
                 .toIntArray()
         )
-        colorPalette?.background = gradientBackground
+        binding.colorPalette.background = gradientBackground
     }
 
     private fun createButtons() {
-        for (colorId in gradientColorsIds) {
-            colorPalette?.addView(createButton(colorId))
+        for (color in HabitColor.values()) {
+            binding.colorPalette.addView(createButton(color))
         }
     }
 
-    private fun createButton(colorId: Int): MaterialButton {
+    private fun createButton(color: HabitColor): MaterialButton {
         val button = MaterialButton(ContextThemeWrapper(context, R.style.ColorPickerButton))
         val buttonSize = context.resources.getDimensionPixelSize(R.dimen.color_picker_button_size)
         val buttonLayoutParams = LinearLayout.LayoutParams(buttonSize, buttonSize)
@@ -130,29 +95,29 @@ class ColorPickerFragment : DialogFragment() {
         button.insetBottom = 0
         button.cornerRadius = context.resources.getDimensionPixelSize(R.dimen.corner_radius)
 
-        button.backgroundTintList = ContextCompat.getColorStateList(context, colorId)
+        button.backgroundTintList = ContextCompat.getColorStateList(context, color.colorId)
 
         button.setOnClickListener {
-            setSelectedColorValues(colorId)
+            setSelectedColorValues(color)
         }
 
         return button
     }
 
-    private fun setSelectedColorValues(colorId: Int) {
-        selectedColorId = colorId
+    private fun setSelectedColorValues(color: HabitColor) {
+        selectedColor = color
 
-        val colorValue = context.getColor(colorId)
-        selectedColorImage?.backgroundTintList = ColorStateList.valueOf(colorValue)
-        rgbValue?.text = colorValue.toRgb()
-        hsvValue?.text = colorValue.toHsv()
-        hexValue?.text = colorValue.toHex()
+        val colorValue = context.getColor(color.colorId)
+        binding.selectedColor.backgroundTintList = ColorStateList.valueOf(colorValue)
+        binding.rgbValue.text = colorValue.toRgb()
+        binding.hsvValue.text = colorValue.toHsv()
+        binding.hexValue.text = colorValue.toHex()
     }
 
     private fun setListenerOnDefaultColorButton(view: View) {
         val defaultColorButton: Button = view.findViewById(R.id.reset_color)
         defaultColorButton.setOnClickListener {
-            setSelectedColorValues(R.color.default_color)
+            setSelectedColorValues(HabitColor.defaultColor())
         }
     }
 
@@ -161,7 +126,7 @@ class ColorPickerFragment : DialogFragment() {
         saveButton.setOnClickListener {
             parentFragmentManager.setFragmentResult(
                 REQUEST_KEY,
-                bundleOf(BUNDLE_KEY to selectedColorId))
+                bundleOf(BUNDLE_KEY to selectedColor))
             dismiss()
         }
     }

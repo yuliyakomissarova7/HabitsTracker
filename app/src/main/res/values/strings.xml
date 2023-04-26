@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">HabitsTracker</string>
-    <!-- Strings used for fragments for navigation -->
 
     <string name="edit_habit_name">Название привычки</string>
     <string name="close_editing_habit">Закрыть</string>
@@ -51,4 +50,15 @@
     <string name="good_habits_title">Полезные</string>
     <string name="bad_habits_title">Вредные</string>
     <string name="about_app_title">О приложении</string>
+
+    <string name="bottom_sheet_title">Фильтры</string>
+    <string name="bottom_sheet_priority_title">Приоритет</string>
+    <string name="bottom_sheet_color_title">Цвет</string>
+    <string name="sort_by_creation_date_ascending">Сначала созданные давно</string>
+    <string name="sort_by_creation_date_descending">Сначала созданные недавно</string>
+    <string name="viewText">Select color</string>
+    <string name="geleteText">Удалить</string>
+    <string name="habitsText">Привычки</string>
+    <string name="aboutAppText">О приложении</string>
+    <string name="appTitle">Трекер \nпривычек</string>
 </resources>
