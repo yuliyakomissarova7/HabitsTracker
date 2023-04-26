@@ -10,6 +10,6 @@ inline fun <reified T : Serializable> Bundle.customGetSerializable(key: String, 
     return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
         getSerializable(key, clazz)
     } else {
-        getSerializable(key) as? T
+        getSerializable(key) as T
     }
 }

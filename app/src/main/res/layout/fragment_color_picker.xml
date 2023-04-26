@@ -15,7 +15,8 @@
         android:padding="10dp"
         android:clipToPadding="false"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/viewText">
 
         <LinearLayout
             android:id="@+id/color_palette"

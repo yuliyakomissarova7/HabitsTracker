@@ -3,10 +3,10 @@
     <item
         android:id="@id/mainFragment"
         android:icon="?attr/actionModePasteDrawable"
-        android:title="Привычки" />
+        android:title="@string/habitsText" />
 
     <item
         android:id="@id/aboutAppFragment"
         android:icon="@android:drawable/ic_dialog_info"
-        android:title="О приложении" />
+        android:title="@string/aboutAppText" />
 </menu>
