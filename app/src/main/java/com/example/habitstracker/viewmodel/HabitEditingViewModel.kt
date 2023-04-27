@@ -5,8 +5,15 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.habitstracker.entities.Habit
 import com.example.habitstracker.model.HabitRepository
+import kotlinx.coroutines.*
+import kotlin.coroutines.CoroutineContext
 
-class HabitEditingViewModel(private val repository: HabitRepository, private val  habitId: Long?) : ViewModel() {
+class HabitEditingViewModel(private val repository: HabitRepository, private val  habitId: Long?) : ViewModel(), CoroutineScope {
+    private val job = SupervisorJob()
+
+    override val coroutineContext: CoroutineContext
+        get() = Dispatchers.IO + job + CoroutineExceptionHandler { _, e -> throw e }
+
     private var mutableHabit: MutableLiveData<Habit?> = MutableLiveData()
 
     val habit: LiveData<Habit?> = repository.getHabit(habitId)
@@ -19,11 +26,7 @@ class HabitEditingViewModel(private val repository: HabitRepository, private val
         mutableHabit = MutableLiveData(repository.getHabit(habitId).value)
     }
 
-    fun createOrUpdate(newHabit: Habit) {
-        repository.createOrUpdate(newHabit)
-    }
+    fun createOrUpdate(newHabit: Habit) = launch { repository.createOrUpdate(newHabit) }
 
-    fun delete(newHabit: Habit) {
-        repository.delete(newHabit)
-    }
+    fun delete(newHabit: Habit) = launch { repository.delete(newHabit) }
 }
