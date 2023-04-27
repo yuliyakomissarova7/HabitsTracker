@@ -22,6 +22,11 @@ class HabitEditingViewModel(private val repository: HabitRepository, private val
         load()
     }
 
+    override fun onCleared() {
+        super.onCleared()
+        coroutineContext.cancelChildren()
+    }
+
     private fun load() {
         mutableHabit = MutableLiveData(repository.getHabit(habitId).value)
     }
