@@ -1,4 +1,4 @@
-package com.example.habitstracker.model
+package com.example.habitstracker.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -14,10 +14,10 @@ import com.example.habitstracker.entities.*
 interface HabitDao {
 
     @Upsert
-    fun createOrUpdate(habit: Habit)
+    suspend fun createOrUpdate(habit: Habit)
 
     @Delete
-    fun delete(habit: Habit)
+    suspend fun delete(habit: Habit)
 
     @Query("SELECT * FROM habit WHERE id LIKE :id")
     fun getHabit(id: Long?): LiveData<Habit?>
