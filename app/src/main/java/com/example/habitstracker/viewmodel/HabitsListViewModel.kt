@@ -6,7 +6,7 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.habitstracker.entities.Habit
 import com.example.habitstracker.entities.*
-import com.example.habitstracker.model.HabitRepository
+import com.example.habitstracker.db.HabitRepository
 
 data class Filter(
     val habits: LiveData<List<Habit>>,

@@ -1,8 +1,8 @@
 package com.example.habitstracker
 
 import android.app.Application
-import com.example.habitstracker.model.HabitDatabase
-import com.example.habitstracker.model.HabitRepository
+import com.example.habitstracker.db.HabitDatabase
+import com.example.habitstracker.db.HabitRepository
 
 class HabitTrackerApplication : Application() {
     private val database by lazy { HabitDatabase.getDatabase(this) }
