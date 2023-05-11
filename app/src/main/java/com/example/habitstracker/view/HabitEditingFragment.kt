@@ -32,7 +32,7 @@ const val BUNDLE_KEY = "selectedColor"
 class HabitEditingFragment : Fragment() {
     private lateinit var viewModel: HabitEditingViewModel
     private lateinit var binding: FragmentHabitEditingBinding
-    private var habitId: Long? = -1
+    private var habitId: String? = null
     private var selectedColor: HabitColor = HabitColor.defaultColor()
     private var titleIsRequiredMessage: TextView? = null
     private lateinit var activityContext: Context
@@ -40,9 +40,7 @@ class HabitEditingFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            habitId = if (it.getLong(ARG_HABIT_ID) == -1L) { null } else {
-                it.getLong(ARG_HABIT_ID)
-            }
+            habitId = it.getString(ARG_HABIT_ID)
         }
     }
 
@@ -204,7 +202,7 @@ class HabitEditingFragment : Fragment() {
             description,
             selectedColor,
             Date(),
-            habitId ?: 0
+            habitId ?: ""
         )
     }
 }

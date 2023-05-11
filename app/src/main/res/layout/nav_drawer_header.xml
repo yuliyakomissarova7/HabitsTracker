@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="104dp"
-        android:background="@color/default_color"
-        android:text="@string/appTitle"
-        android:gravity="center_vertical"
-        android:paddingHorizontal="20dp"
-        android:textAppearance="@style/AppName"/>
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/avatar_description"/>
 
 </LinearLayout>

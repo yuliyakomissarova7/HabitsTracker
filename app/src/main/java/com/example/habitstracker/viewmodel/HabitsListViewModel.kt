@@ -1,12 +1,11 @@
 package com.example.habitstracker.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
 import com.example.habitstracker.entities.Habit
 import com.example.habitstracker.entities.*
 import com.example.habitstracker.db.HabitRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 data class Filter(
     val habits: LiveData<List<Habit>>,
@@ -30,7 +29,7 @@ class HabitsListViewModel(private val repository: HabitRepository): ViewModel() 
         _searchQuery,
     ))
 
-    var habits: LiveData<List<Habit>> = repository.habits
+    var habits: LiveData<List<Habit>>
 
     private var selectedPrioritiesMutableLiveData: MutableLiveData<MutableSet<Priority>> = MutableLiveData(_selectedPriorities)
     private var selectedColorsMutableLiveData: MutableLiveData<MutableSet<HabitColor>> = MutableLiveData(_selectedColors)
@@ -45,6 +44,9 @@ class HabitsListViewModel(private val repository: HabitRepository): ViewModel() 
         habits = Transformations.switchMap(filter) { filter ->
             repository.applyFilters(filter)
         }
+
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.getHabitsFromServer() }
     }
 
     fun <T> removeFromFilter(option: T, filterType: FilterCriterion) {

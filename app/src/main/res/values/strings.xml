@@ -50,6 +50,7 @@
     <string name="good_habits_title">Полезные</string>
     <string name="bad_habits_title">Вредные</string>
     <string name="about_app_title">О приложении</string>
+    <string name="avatar_description">avatar</string>
 
     <string name="bottom_sheet_title">Фильтры</string>
     <string name="bottom_sheet_priority_title">Приоритет</string>
