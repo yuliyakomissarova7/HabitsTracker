@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sort_by_creation_date_descending">Сначала созданные недавно</string>
+    <string name="sort_by_creation_date_ascending">Сначала созданные давно</string>
+    <string name="high_priority">Очень важно</string>
+    <string name="medium_priority">Важно</string>
+    <string name="low_priority">Не очень важно</string>
+    <string name="day">день</string>
+    <string name="week">неделю</string>
+    <string name="month">месяц</string>
+    <string name="year">год</string>
+    <string name="never">Никогда</string>
+    <string name="every_day">Ежедневно</string>
+</resources>
